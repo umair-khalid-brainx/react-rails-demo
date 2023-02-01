@@ -1,5 +1,5 @@
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import React, { useState, useEffect } from "react";
 
 export default function StudentList() {
 	const [students, setStudents] = useState([]);
@@ -36,9 +36,8 @@ export default function StudentList() {
 
 	return (
 		<section className='m-5'>
-			<h1 className='h1 text-center'>Student Info</h1>
-			<h3>Student Index</h3>
-			<table className='table table-striped'>
+			<h1 className='h1 text-center m-5'>Student Info</h1>
+			<table className='table table-striped m-5'>
 				<thead>
 					<tr>
 						<th scope='col'>ID</th>
@@ -63,7 +62,7 @@ export default function StudentList() {
 					))}
 				</tbody>
 			</table>
-			<button className='btn btn-dark' onClick={() => handleCreate()}>Create New Student</button>
+			<button className='btn btn-dark mx-5' onClick={() => handleCreate()}>Create New Student</button>
 		</section>
 	);
 }
